@@ -1,0 +1,197 @@
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5/index.css");
+
+:root {
+    --base: #232136;
+    --surface: #2a273f;
+    --overlay: #393552;
+    --muted: #6e6a86;
+    --subtle: #908caa;
+    --text: #e0def4;
+    --pine: #3e8fb0;
+    --foam: #9ccfd8;
+    --iris: #c4a7e7;
+    --hl-med: #44415a;
+    --hl-high: #56526e;
+    --love: #eb6f92;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Iosevka", monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--base);
+}
+
+.directory-title {
+    max-width: 1100px;
+    margin: 2rem auto 0.5rem;
+    padding: 0 2rem;
+    font-size: 1.75rem;
+}
+
+.directory-intro {
+    max-width: 1100px;
+    margin: 0 auto 0.5rem;
+    padding: 0 2rem;
+    color: var(--subtle);
+    font-size: 1rem;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.member-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--surface);
+    transition: box-shadow 0.2s ease;
+    border-style: solid;
+    border-color: var(--subtle);
+}
+
+.member-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.member-name {
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.member-name a {
+    text-decoration: none;
+    color: var(--foam);
+}
+
+.member-name a:hover {
+    text-decoration: underline;
+}
+
+.member-role {
+    color: var(--subtle);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.member-profile {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.profile-header {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+.profile-avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.profile-info h1 {
+    margin: 0 0 0.5rem;
+}
+
+.profile-role {
+    font-size: 1.2rem;
+    color: var(--subtle);
+    margin: 0 0 0.5rem;
+}
+
+.profile-email {
+    margin: 0 0 1rem;
+}
+
+.profile-email a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--foam);
+    text-decoration: none;
+}
+
+.profile-email a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.75rem;
+    background: var(--overlay);
+    color: var(--text);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background 0.15s ease;
+}
+
+.social-links a:hover {
+    background: var(--hl-med);
+}
+
+.profile-bio {
+    line-height: 1.7;
+}
+
+.profile-bio h2 {
+    margin-top: 2rem;
+}
+
+.profile-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--hl-med);
+}
+
+.profile-footer a {
+    color: var(--foam);
+    text-decoration: none;
+}
+
+.profile-footer a:hover {
+    text-decoration: underline;
+}

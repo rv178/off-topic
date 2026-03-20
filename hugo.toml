@@ -1,6 +1,6 @@
 baseURL = 'https://ot.rohith.net/'
 languageCode = 'en-us'
-title = 'Off topic'
+title = '#off-topic'
 
 [params]
   defaultAvatar = "/images/default-avatar.png"

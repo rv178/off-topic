@@ -1,4 +1,10 @@
-@import url("https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5/index.css");
+@font-face {
+    font-family: "Iosevka";
+    src: url("/fonts/Iosevka-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --base: #232136;
@@ -265,7 +271,7 @@ img {
 
 hr {
     border: none;
-    height: 2px;
+    height: 1px;
     background: var(--hl-med);
     margin: 2rem 0;
 }

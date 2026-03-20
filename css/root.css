@@ -271,7 +271,7 @@ img {
 
 hr {
     border: none;
-    height: 2px;
+    height: 1px;
     background: var(--hl-med);
     margin: 2rem 0;
 }

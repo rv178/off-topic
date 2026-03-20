@@ -46,6 +46,45 @@ html {
     background: var(--base);
 }
 
+.search-container {
+    max-width: 1100px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: "Iosevka", monospace;
+    font-size: 1rem;
+    color: var(--text);
+    background: var(--surface);
+    border: 2px solid var(--overlay);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+#search-input::placeholder {
+    color: var(--muted);
+}
+
+#search-input:focus {
+    border-color: var(--foam);
+}
+
+.profile-nav {
+    margin-bottom: 1.5rem;
+}
+
+.profile-nav a {
+    color: var(--foam);
+    text-decoration: none;
+}
+
+.profile-nav a:hover {
+    text-decoration: underline;
+}
+
 body {
     margin: 0;
     font-family: "Iosevka", monospace;
@@ -88,7 +127,7 @@ body {
     background: var(--surface);
     transition: box-shadow 0.2s ease;
     border-style: solid;
-    border-color: var(--subtle);
+    border-color: var(--overlay);
 }
 
 .member-avatar {

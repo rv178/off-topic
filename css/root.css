@@ -181,6 +181,13 @@ body {
     margin-top: 2rem;
 }
 
+.profile-bio img[alt="Map of Kartha"] {
+    display: block;
+    width: min(100%, 420px);
+    height: auto;
+    margin: 1.5rem auto;
+}
+
 .profile-footer {
     margin-top: 3rem;
     padding-top: 1rem;

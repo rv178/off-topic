@@ -1,11 +1,18 @@
-{{ define "main" }} {{ with .Title }}
+{{ define "main" }}
+
+{{ with .Title }}
 <h1 class="directory-title">{{ . }}</h1>
 {{ end }} {{ with .Content }}
 <div class="directory-intro">{{ . }}</div>
 {{ end }}
+
+<div class="search-container">
+    <input type="text" id="search-input" placeholder="Search members..." autocomplete="off">
+</div>
+
 <div class="members-grid">
     {{ range .Pages.ByTitle }}
-    <article class="member-card">
+    <article class="member-card" data-name="{{ .Title | lower }}" data-bio="{{ with .Params.bio }}{{ . | lower }}{{ end }}">
         {{ $avatar := .Resources.GetMatch "avatar.*" }} {{ if $avatar }}
         <img
             src="{{ $avatar.RelPermalink }}"
@@ -30,4 +37,8 @@
     </article>
     {{ end }}
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+{{- $search := resources.Get "js/search.js" -}}
+<script src="{{ $search.RelPermalink }}"></script>
 {{ end }}

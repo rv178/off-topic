@@ -1,5 +1,9 @@
 {{ define "main" }}
 <article class="member-profile">
+  <nav class="profile-nav">
+    <a href="{{ "/" | relURL }}">&larr; Back</a>
+  </nav>
+
   <header class="profile-header">
     {{ $avatar := .Resources.GetMatch "avatar.*" }}
     {{ if $avatar }}
